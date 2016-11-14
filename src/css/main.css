@@ -128,6 +128,25 @@ header .top a {
     color: #fff;    /*不合理，待改进*/
 }
 
+@media only screen and (max-width: 50em) {
+    header .top .top-nav-item {
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+
+}
+
+@media only screen and (max-width: 30em) {
+    header .top .tel,
+    .top-nav .top-nav-item:nth-child(3),
+    .top-nav .top-nav-item:nth-child(4) {
+        display: none;
+    }
+}
+
+
 header .main {
     padding: 0;     /*???*/
 }
@@ -141,7 +160,7 @@ header .main-nav {
 header .main-nav-item {
     display: inline-block;
     border-left: 1px solid #f0ede9;
-    padding: 0 3rem;
+    padding: 0 2rem;
     font:bold 1.6rem/5.5rem sans-serif;
 }
 header .main-nav-item a {
@@ -152,7 +171,33 @@ header .main-nav-item a:active {
     color: #ffb300;
     background-color: #f8f6f1;
 }
+@media only screen and (max-width: 50em) {
+    header .main .brand {
+        float: none;
+        display: block;
+        margin: 1.5rem auto 0.5rem;
+        padding: 0;
+        text-align: center;
+    }
+    header .main-nav {
+        text-align: center;
+    }
+    header .main-nav-item {
+        border: none;
+        padding: 0 1.2rem;
+    }
+}
 
+@media only screen and (max-width: 30em) {
+    header .main-nav-item{
+        line-height: 3rem;
+        font-weight: normal;
+        padding: 0 0.5rem;
+    }
+    header .main-nav .main-nav-item:first-child {
+        display: none;
+    }
+}
 
 
 /* 网站主要内容 */
@@ -196,10 +241,39 @@ header .main-nav-item a:active {
 }
 .trans-report-item {
     display: inline-block;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     line-height: 3rem;
     color: #fff;
 }
+@media only screen and (max-width: 50em) {
+    .trans-data {
+        padding: 1rem 0.5rem;
+    }
+    .trans-money {
+        font-size: 1.6rem;
+        margin:0;
+        padding: 0;
+        letter-spacing: inherit;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    .trans-report-item {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 30em) {
+    .transaction {
+        padding: 0.5rem 0;
+    }
+    .trans-data,.trans-report {
+        float: none;
+        text-align: center;
+    }
+    .trans-data,.trans-report-item {
+        padding: 0;
+    }
+}
+
 /* 滚动广告 */
 .ad {
     display: none;
@@ -239,6 +313,32 @@ header .main-nav-item a:active {
     padding: 0;
     color: #999;
 }
+
+@media only screen and (min-width: 30.0625em) and (max-width: 50em) {
+    .feature-title,.feature-summary {
+        display: block;
+        width: 100%;
+        font-size: 2.6rem;
+        text-align: center;
+    }
+    .feature-summary {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 30em) {
+    .feature {
+        width: 96%;
+        margin: 1rem auto;
+    }
+    .feature-item {
+        display: block;
+        width: auto;
+    }
+    .feature-item+.feature-item {
+        margin: 1rem 0 0;
+    }
+}
+
 /* 最新公告 */
 .notice {
     width: 90%;
@@ -275,6 +375,20 @@ header .main-nav-item a:active {
     margin-right: 2rem;
     color: #ff9900;
 }
+@media only screen and (max-width: 30em) {
+    .notice {
+        width: 96%;
+        margin: 1rem auto;
+        font-size: 1.2rem;
+    }
+    .notice-item {
+        margin-left: 1rem;
+    }
+    .notice-date {
+        display: none;
+    }
+}
+
 
 /* 产品列表 */
 .product {
@@ -385,7 +499,72 @@ header .main-nav-item a:active {
     background-color: #ccc !important;
     cursor: not-allowed;
 }
-/*???*/
+@media only screen and (max-width: 50em) {
+    .product-title {
+        float: none;
+        width: 100%;
+        margin-top: 2rem;
+        font-size: 2.2rem;
+    }
+    .product-summary:first-child {
+        margin-top: 0;
+    }
+    .product-summary {
+        display: inline;
+        font-size: 1.2rem;
+    }
+    .product .product-content {
+        float: none;
+        width: 100%;
+    }
+    .product-item h3 em {
+        font-size: 2.4rem;
+    }
+    .product-item .info {
+        padding: 1rem 1rem 0;
+        font-size: 1.2rem;
+    }
+    .product-item .info p span {
+        font-size: 2rem;
+    }
+    .product-item .buy a {
+        margin: 0.5rem auto;
+    }
+}
+@media only screen and (max-width: 30em) {
+    .product-summary:first-child:before {
+        content: '';
+        display: table;
+    }
+    .product-summary {
+        font-size: 2rem;
+        /*margin-right: 0;*/
+    }
+    .product-item .info {
+        float: right;
+        width: 70%;
+        padding: 1rem 0;
+        border:none;
+    }
+    .product-item h3 {
+        margin-top: 2.5rem;
+    }
+    .product-item .info p {
+        font-size: 1.8rem;
+    }
+    .product-item .buy {
+        clear: both;
+        float: none;
+        width: 100%;
+        padding: 1rem 0 2rem;
+    }
+    .product-item .buy a {
+        margin-top: 0;
+        max-width: 26rem;
+    }
+}
+
+
 
 /* 底部导航 */
 .footer {
@@ -418,7 +597,31 @@ header .main-nav-item a:active {
     font-size: 1.6rem;
     line-height: 3rem;
 }
-
+@media only screen and (max-width: 50em) {
+    .footer-content .brand {
+        display: none;
+    }
+    .footer-content-item {
+        width:20%;
+    }
+    .footer-content-item li {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    .footer-content-item .title {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+}
+@media only screen and (max-width: 30em) {
+    .footer-content {
+        width: 98%;
+    }
+    .footer-content-item .title {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+}
 
 
 /* 底部 */
@@ -484,4 +687,57 @@ footer .footer-col-item .icon-gs {
 footer .footer-copy {
     text-align: center;
     color: #999;
+}
+
+/* ==========
+   打印样式
+   ========== */
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: "("attr(href)")";
+    }
+    /*
+    * 使用#和javascript的超链接不打印href
+    */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows:3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
